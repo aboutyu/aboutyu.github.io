@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이력서 | 유태훈</title>
+    <title>Curriculum Vitae | yutaehun</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -35,13 +35,6 @@
         }
 
         /* 레이아웃 */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: var(--white);
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            padding: 50px;
-        }
 
         /* 헤더 (이름, 연락처) */
         header {
@@ -192,23 +185,84 @@
                 margin-bottom: 5px;
                 color: var(--accent-color);
             }
+            .lang-switch {
+                top: 15px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
         }
+                /* 컨테이너 기준점 설정 */
+        .container {
+            position: relative; /* 추가 */
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding: 50px;
+        }
+
+        /* 언어 전환 링크 스타일 */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .lang-switch a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .lang-switch a:hover {
+            color: var(--accent-color);
+        }
+
+        .lang-switch span {
+            margin: 0 5px;
+            color: var(--border-color);
+            font-weight: 300;
+        }
+        /* 상태 배지 스타일 */
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        /* 상태별 색상 */
+        .status-published { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; } /* 퍼블리시 */
+        .status-review { background-color: #fff3e0; color: #ef6c00; border: 1px solid #ffe0b2; }    /* 리뷰 중 */
+        .status-submitted { background-color: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }  /* 투고 완료 */
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
+            <div class="lang-switch">
+                <a href="index.html" style="color: var(--primary-color); font-weight: 700;">English</a>
+                <span>|</span>
+                <a href="index_ko.html">한글</a>
+            </div>
             <div class="header-left">
-                <h1>유태훈</h1>
+                <h1>Taehun Yu</h1>
                 <p>Data Scientist & Full Stack Developer</p>
-                <p style="font-size: 0.9rem; margin-top: 5px; color: #888;">데이터 기반의 의사결정과 시스템 구축을 지향합니다.</p>
+                <p style="font-size: 0.9rem; margin-top: 5px; color: #888;">Data-driven decision making and system development.</p>
             </div>
             <div class="contact-info">
                 <div><i class="fa-solid fa-envelope"></i> yu7987j@naver.com</div>
                 <div><i class="fa-solid fa-phone"></i> +82-10-8391-1277</div>
                 <div><i class="fa-brands fa-github"></i> <a href="https://github.com/aboutyu" target="_blank" rel="noopener noreferrer">github.com/aboutyu</a></div>
-                <div><i class="fa-solid fa-location-dot"></i> 서울/경기</div>
+                <div><i class="fa-solid fa-location-dot"></i> Gyeonggi-do, South Korea</div>
             </div>
         </header>
 
@@ -245,14 +299,19 @@
                 </div>
             </div>
             <div class="content-item">
-                <div class="date-col">Data & AI</div>
+                <div class="date-col">Research & AI</div>
                 <div class="detail-col">
                     <div class="skills-grid" style="gap: 5px; margin-top: 10px;">
                         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+                        <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
+                        <img src="https://img.shields.io/badge/STATA-1A538A?style=flat-square" alt="STATA">
+                        <img src="https://img.shields.io/badge/SPSS-0073B7?style=flat-square" alt="SPSS">
                         <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
-                        <img src="https://img.shields.io/badge/XAI-FF6F61?style=flat-square" alt="XAI">
-                        <img src="https://img.shields.io/badge/TensorFlow-FF6F61?style=flat-square" alt="TensorFlow">
+                        <img src="https://img.shields.io/badge/Machine_Learning-3776AB?style=flat-square" alt="Machine Learning">
+                        <img src="https://img.shields.io/badge/RAG-000000?style=flat-square" alt="RAG">
                         <img src="https://img.shields.io/badge/LLM-412991?style=flat-square&logo=openai&logoColor=white" alt="LLM">
+                        <img src="https://img.shields.io/badge/XAI-FF6F61?style=flat-square" alt="XAI">
+                        <img src="https://img.shields.io/badge/TensorFlow-FF6F61?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow">
                         <img src="https://img.shields.io/badge/XGBoost-28A745?style=flat-square" alt="XGBoost">
                         <img src="https://img.shields.io/badge/LightGBM-28A745?style=flat-square" alt="LightGBM">
                         <img src="https://img.shields.io/badge/Bayesian_Analysis-6C5CE7?style=flat-square" alt="Bayesian Analysis">
@@ -271,8 +330,6 @@
                     <ul>
                         <li>주요 연구: 머신러닝 알고리즘 및 베이지안 모형을 이용한 예측 연구</li>
                         <li>학위논문: 머신러닝과 베이지안 방법론을 결합한 데이터 분석 수행</li>
-                        <li>2026. 3.: Assessing the Commercial Potential of University Patents through Explainable Machine Learning (Scientometric)</li>
-                        <li>2025. 3.: 인공지능 기법을 이용한 혁신역량과 중소기업 성장 예측연구 (한국혁신학회지)</li>
                     </ul>
                 </div>
             </div>
@@ -293,44 +350,114 @@
             </section>
 
         <section>
-            <h2 class="section-title">Key Projects</h2>
+            <h2 class="section-title">Research</h2>
             
-            <div class="content-item">
-                <div class="date-col">2025.11 - 2025.12</div>
+            <!-- <div class="content-item">
+                <div class="date-col">International Peer-Reviewed Journals (SSCI/SCIE)</div>
                 <div class="detail-col">
-                    <h3>개인 맞춤형 건강/식단 타임라인 앱 개발</h3>
-                    <p class="subtitle">Full Stack Developer (1인 개발)</p>
-                    <ul>
-                        <li><strong>Backend:</strong> NestJS, TypeORM, MySQL을 활용하여 RESTful API 설계 및 구축</li>
-                        <li><strong>Frontend:</strong> Flutter를 사용하여 AOS/IOS 크로스 플랫폼 앱 개발</li>
-                        <li><strong>Feature:</strong> 식단(FoodLog)과 건강 데이터(HealthLog)를 통합하여 시간순으로 정렬된 타임라인 서비스 구현</li>
-                        <li><strong>Tech:</strong> UUID 기반의 배치 데이터 처리 전략 수립으로 데이터 무결성 확보</li>
+                    <h3></h3>
+                    <p class="subtitle"><strong>Yu, T.</strong>, Kim, K., & Park, J. (2026)</p>
+                    <p style="font-size: 0.95rem; color: #555; margin-bottom: 5px;">
+                        <strong>Scientometrics</strong> | <span style="color: var(--accent-color);">Ranked in Q1 (Information Systems)</span>
+                    </p>
+                    <ul style="font-size: 0.9rem;">
+                        <li>Proposed an <strong>Explainable AI (XAI)</strong> model to identify key determinants of patent commercialization.</li>
+                        <li>Enhanced predictive accuracy by 15% compared to traditional econometric models while ensuring model interpretability.</li>
                     </ul>
+                </div>
+            </div> -->
+
+            <!-- <li>2026. 3.: (Scientometric)</li>
+                        <li>2025. 3.: 인공지능 기법을 이용한 혁신역량과 중소기업 성장 예측연구 (한국혁신학회지)</li> -->
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-globe"></i> International Journals (SSCI/SCIE)
+                </h3>
+                
+                <div class="content-item">
+                    <div class="date-col">2026.03 (Exp.)</div>
+                    <div class="detail-col">
+                        <h3>Assessing the Commercial Potential of University Patents through Explainable Machine Learning
+                            <span class="status-badge status-review">Under Review</span>
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #555; margin-bottom: 5px;">
+                            <strong>Yu, T.</strong>, Kim, K., & Park, J. (2026)
+                            | <strong>Scientometrics</strong> 
+                            | JCR Q1 (Top 10%) 
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=24222&tip=sid&clean=0" 
+                                target="_blank" 
+                                style="color: #3498db; text-decoration: underline; text-underline-offset: 1px; font-weight: 500;">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </p>
+                        <p style="font-size: 0.95rem; color: #555; margin-bottom: 5px;">
+                            https://doi.org/10.46251/INNOS.2025.2.20.1.1    
+                            <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003175162"  target="_blank" 
+                                style="color: #3498db; text-decoration: underline; text-underline-offset: 1px; font-weight: 500;">
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </a>    
+                        </p>
+                        <p class="subtitle"></p>
+                        <ul style="font-size: 0.9rem;">
+                            <li>Proposed an <strong>Explainable AI (XAI)</strong> model to identify key determinants of patent commercialization.</li>
+                            <li>Enhanced predictive accuracy by 15% compared to traditional econometric models while ensuring model interpretability.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="content-item">
-                <div class="date-col">2025.01 - 2025.11</div>
-                <div class="detail-col">
-                    <h3>대학 특허 기술이전 예측 모델 연구 (박사 학위 논문)</h3>
-                    <p class="subtitle">Researcher</p>
-                    <ul>
-                        <li>Python(Scikit-learn, XGBoost)을 활용하여 특허 정형/비정형 데이터 분석</li>
-                        <li>베이지안 신경망과 빈도주의 머신러닝을 결합하여 예측 정확도 및 해석력(Explainability) 개선</li>
-                        <li>SHAP, PFI 등을 활용한 주요 변수 중요도 도출 및 기술경영학적 시사점 제안</li>
-                    </ul>
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-book-open"></i> Domestic Journals (KCI)
+                </h3>
+
+                <div class="content-item">
+                    <div class="date-col">2025.02.</div>
+                    <div class="detail-col">
+                        <h3>A Study on Innovation Capability and Growth Prediction  of SMEs Using Artificial Intelligence Techniques
+                            <span class="status-badge status-published">Published</span>
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #555; margin-bottom: 5px;">
+                            <strong>Yu, T.</strong> & Park, J. (2025)
+                            | <strong>Innovation Studies</strong> 
+                            | KCI IF: 1.4 (Excellent citation impact)
+                                <a href="https://www.scimagojr.com/journalsearch.php?q=24222&tip=sid&clean=0" 
+                                target="_blank" 
+                                style="color: #3498db; text-decoration: underline; text-underline-offset: 1px; font-weight: 500;">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </p>
+                        <p style="font-size: 0.95rem; color: #555; margin-bottom: 5px;">
+                            https://doi.org/10.46251/INNOS.2025.2.20.1.1    
+                            <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003175162"  target="_blank" 
+                                style="color: #3498db; text-decoration: underline; text-underline-offset: 1px; font-weight: 500;">
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </a>  
+                        <p class="subtitle"></p>
+                        <ul style="font-size: 0.9rem;">
+                            <li>Proposed an <strong>Explainable AI (XAI)</strong> model to identify key determinants of patent commercialization.</li>
+                            <li>Enhanced predictive accuracy by 15% compared to traditional econometric models while ensuring model interpretability.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="content-item">
-                <div class="date-col">2025.12</div>
-                <div class="detail-col">
-                    <h3>교회 라이브 스트리밍 시스템 최적화</h3>
-                    <p class="subtitle">Media Engineer</p>
-                    <ul>
-                        <li>vMix 및 YouTube Live를 활용한 실시간 송출 파이프라인 구축 및 트러블슈팅</li>
-                        <li>네트워크 대역폭 최적화 및 오디오/비디오 싱크 문제 해결</li>
-                    </ul>
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 15px;">
+                    <i class="fa-solid fa-graduation-cap"></i> Doctoral Dissertation
+                </h3>
+
+                <div class="content-item">
+                    <div class="date-col">2026.02</div>
+                    <div class="detail-col">
+                        <h3>머신러닝과 베이지안 방법론을 결합한 기술가치 평가 모델 연구
+                            <span class="status-badge status-published">Completed</span>
+                        </h3>
+                        <p class="subtitle">Konkuk University | Advisor: Prof. Jaemin Park</p>
+                    </div>
                 </div>
             </div>
         </section>
